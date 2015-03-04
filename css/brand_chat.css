@@ -2,91 +2,405 @@
 /* Chat CSS Document */
 
 /* reset styles */
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	outline: 0;
-	font-size: 100%;
-	vertical-align: baseline;
-	background: transparent
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
 body {
-	line-height: 1
+  line-height: 1;
 }
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-	display: block
+
+ol, ul {
+  list-style: none;
 }
-nav ul {
-	list-style: none
-}
+
 blockquote, q {
-	quotes: none
+  quotes: none;
 }
-blockquote:before, blockquote:after, q:before, q:after {
-	content: '';
-	content: none
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
 }
-a {
-	margin: 0;
-	padding: 0;
-	font-size: 100%;
-	vertical-align: baseline;
-	background: transparent
+
+input[type="radio"] {
+  vertical-align: text-bottom;
 }
-ins {
-	background-color: #ff9;
-	color: #000;
-	text-decoration: none
+
+input[type="checkbox"] {
+  vertical-align: bottom;
+  *vertical-align: baseline;
 }
-mark {
-	background-color: #ff9;
-	color: #000;
-	font-style: italic;
-	font-weight: bold
+
+.ie6 input {
+  vertical-align: text-bottom;
 }
-del {
-	text-decoration: line-through
+
+select, input, textarea {
+  font: 100% 'light',sans-serif;
 }
-abbr[title], dfn[title] {
-	border-bottom: 1px dotted;
-	cursor: help
-}
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0
+  font-size: inherit;
+  border-spacing: 0;
 }
-hr {
-	display: block;
-	height: 1px;
-	border: 0;
-	border-top: 1px solid #ccc;
-	margin: 1em 0;
-	padding: 0
+
+ins {
+  text-decoration: none;
 }
-input, select {
-	vertical-align: middle
+
+del {
+  text-decoration: line-through;
 }
-html, body {
-	height: 100%;
-	width: 100%
+
+/* = clearfix */
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: block;
+  height: 0;
+  overflow: auto;
 }
-body {
-	background: transparent;
-	height: 100%;
-	width: 100%;
-	font: 16px Helvetica, Arial, sans-serif;
-	position: relative
+
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
 }
-.clear {
-	clear: both
-}
+
 .clearfix:after {
-	content: '';
-	display: block;
-	height: 0;
-	clear: both;
-	visibility: hidden
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+input:focus, textarea:focus{
+	outline:none!important;
+}
+
+/* HB styles */
+
+@font-face {
+  font-family: 'light';
+  src: url("fonts/HelloType-l.eot");
+  src: url("fonts/HelloType-l.eot?#iefix") format("eot"), url("fonts/HelloType-l.woff") format("woff"), url("fonts/HelloType-l.ttf") format("truetype"), url("fonts/HelloType-l.svg#light") format("svg");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'regular';
+  src: url("fonts/HelloType-r.eot");
+  src: url("fonts/HelloType-r.eot?#iefix") format("eot"), url("fonts/HelloType-r.woff") format("woff"), url("fonts/HelloType-r.ttf") format("truetype"), url("fonts/HelloType-r.svg#regular") format("svg");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'bnpiconfont';
+  src: url("fonts/bnpiconfont.eot");
+  src: url("fonts/bnpiconfont.eot?#iefix") format("embedded-opentype"), url("fonts/bnpiconfont.woff") format("woff"), url("fonts/bnpiconfont.ttf") format("truetype"), url("fonts/bnpiconfont.svg#bnpiconfont") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="fontcon-"], [class*=" fontcon-"] {
+  font-family: 'bnpiconfont';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fontcon-close:before {
+  content: "\e615";
+}
+.fontcon-expand:before {
+  content: "\e629";
+}
+.fontcon-collapse:before {
+  content: "\e62a";
 }
 
 /* chat component styles */
+
+body{
+	font-family: 'light';
+}
+.dummyheading{ /* need to remove it */
+	border: 1px solid #ccc;
+	text-align: center;
+	background: #ccc;
+	color: #fff;
+}
+
+/* common styles */
+.f_left{
+	 float:left;
+}
+.f_right{
+	 float:right;
+}
+.hide{
+	display:none;
+}
+.show{
+	display:block!important;
+}
+
+/* header */
+.chat_window{
+	line-height:1em;
+	width: 320px;
+	margin:20px auto 50px;
+	border:1px solid #ccc;
+}
+.h_services {
+  background: #4ec1d3;
+  background: -moz-linear-gradient(top, #4ec1d3 0%, #1c87ad 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4ec1d3), color-stop(100%, #1c87ad));
+  background: -webkit-linear-gradient(top, #4ec1d3 0%, #1c87ad 100%);
+  background: -o-linear-gradient(top, #4ec1d3 0%, #1c87ad 100%);
+  background: -ms-linear-gradient(top, #4ec1d3 0%, #1c87ad 100%);
+  background: linear-gradient(to bottom, #4ec1d3 0%, #1c87ad 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4ec1d3', endColorstr='#1c87ad',GradientType=0);
+}
+.chat_header_heading{
+	
+}
+.chat_header_icons{
+	
+}
+.chat_header {
+	padding: 15px 12px;
+	color: #fff;
+}
+.chat_header_icons span {
+	display: inline-block;
+	font-size: 13px;
+	margin-left: 6px;
+	cursor: pointer;
+}
+.alert {
+	background: #e53012;
+	padding: 12px;
+	color: #fff;
+}
+.chat_body_inner{
+	background:#f9f9f9;
+	padding: 18px 12px 12px;
+}
+.chat_info{
+	text-align:center;
+}
+.h_l1 {
+	font-family: 'regular';
+	text-transform: uppercase;
+	margin-bottom: 12px;
+}
+.d_l1 {
+	color: #4b4b4b;
+	font-size: 15px;
+	margin-bottom: 20px;
+}
+.form_row {
+	margin-bottom: 15px;
+}
+.form_row label {
+	font-family: 'regular';
+	padding-bottom: 5px;
+	display: block;
+}
+.form_row .default_input {
+  border: 1px solid #d1d1d1;
+  background: #ffffff;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  cursor: pointer;
+  height: 2.75em;
+  -webkit-border-top-left-radius: 0.38em;
+  -webkit-border-top-right-radius: 0.38em;
+  -webkit-border-bottom-right-radius: 0.38em;
+  -webkit-border-bottom-left-radius: 0.38em;
+  -moz-border-radius-topleft: 0.38em;
+  -moz-border-radius-topright: 0.38em;
+  -moz-border-radius-bottomright: 0.38em;
+  -moz-border-radius-bottomleft: 0.38em;
+  border-top-left-radius: 0.38em;
+  border-top-right-radius: 0.38em;
+  border-bottom-right-radius: 0.38em;
+  border-bottom-left-radius: 0.38em;
+  padding: 0px 12px;
+}
+.form_row .default_input > input {
+  width: 100%;
+  height: 44px;
+  background: none !important;
+  padding: 11px 0px;
+  max-height: none !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  text-indent: 0 !important;
+  border: 0 none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  line-height: 1.4;
+  color: #76767b;
+  font-family: 'light', arial;
+}
+/* custom check box */
+/* custom checkbox and radio button */
+input[type=checkbox].css-checkbox, input[type=radio].css-checkbox {
+  position: absolute;
+  z-index: -1000;
+  top: -1000px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  vertical-align: middle;
+  margin-top: 0;
+}
+input[type=checkbox].css-checkbox + label.css-label, input[type=radio].css-checkbox + label.css-label {
+  padding-left: 1.375em;
+  display: inline-block;
+  line-height: 1;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  font-size: 1em;
+  vertical-align: middle;
+  cursor: pointer;
+  position: relative;
+  min-height: 1em;
+}
+input[type=checkbox].css-checkbox:checked + label.css-label:after {
+  font-family: 'bnpiconfont';
+  content: "\e614";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 0.875em;
+}
+input[type=radio].css-checkbox:checked + label.css-label:after {
+  font-family: 'bnpiconfont';
+  content: "\e63f";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 0.875em;
+}
+
+label.css-label:before {
+  font-family: 'bnpiconfont';
+  content: "\e63c";
+  color: #999;
+  background: white;
+  position: absolute;
+  left: 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 0.875em;
+  box-shadow: inset 0 0 6px #B8B8B8;
+  top: 2px;
+}
+label.css-label.radio:before {
+  content: "\e63e";
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* Button */
+.btn_default {
+  min-width: 90px;
+  height: 44px;
+  padding: 0 1em;
+  font-size: 1em;
+  font-family: 'regular', arial;
+  line-height: 1em;
+  cursor: pointer;
+  margin: 12px 0 0;
+  text-align: center;
+  width:100%;
+  border:0;
+  -webkit-border-top-left-radius: 0.38em;
+  -webkit-border-top-right-radius: 0.38em;
+  -webkit-border-bottom-right-radius: 0.38em;
+  -webkit-border-bottom-left-radius: 0.38em;
+  -moz-border-radius-topleft: 0.38em;
+  -moz-border-radius-topright: 0.38em;
+  -moz-border-radius-bottomright: 0.38em;
+  -moz-border-radius-bottomleft: 0.38em;
+  border-top-left-radius: 0.38em;
+  border-top-right-radius: 0.38em;
+  border-bottom-right-radius: 0.38em;
+  border-bottom-left-radius: 0.38em;
+}
+.btn_default:first-child {
+  margin: 0;
+}
+.btn_primary {
+background: #ff6e78;
+color: #ffffff;
+}
+.btn_primary:hover {
+  background-color: #ff5a64;
+}
+.btn_secondary {
+  background-color: #bec6d0;
+}
+.btn_secondary:hover {
+  background-color: #aeb8c4;
+}
+
