@@ -464,6 +464,8 @@ label.css-label.radio:before {
 	max-height: 200px;
 	overflow-y: scroll;
 	margin-bottom: 13px;
+	padding-right: 12px;
+	min-width: 304px;
 }
 .chat_holder{
 	margin-bottom: 10px;
@@ -481,9 +483,6 @@ label.css-label.radio:before {
   border-bottom-right-radius: 0.38em;
   border-bottom-left-radius: 0.38em;
 }
-.chat_holder p{
-	
-}
 .chat_holder p:first-child{
 	font-family:'regular';
 }
@@ -495,4 +494,16 @@ label.css-label.radio:before {
 	background:#0080a4;
 	color:#d2e8ee;
 	margin-left: 15px;
+}
+.chat_time{
+	background: #efefef;
+	padding: 10px 10px 0;
+	margin: 0 auto 20px;
+	width: 70%;
+}
+.chat_time p {
+	padding-bottom: 10px;
+}
+.chat_time p span {
+	padding: 0 1px;
 }
