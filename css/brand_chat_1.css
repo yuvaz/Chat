@@ -325,6 +325,12 @@ body{
 .chat_loading{
 	font-size:25px;
 }
+.chat_loader {
+  background: url(images/animgif.gif) no-repeat center center;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+}
 
 /* custom check box */
 /* custom checkbox and radio button */
