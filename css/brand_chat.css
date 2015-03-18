@@ -131,8 +131,8 @@ input:focus, textarea:focus{
 
 @font-face {
   font-family: 'bnpiconfont';
-  src: url("fonts/bnpiconfont.eot");
-  src: url("fonts/bnpiconfont.eot?#iefix") format("embedded-opentype"), url("fonts/bnpiconfont.woff") format("woff"), url("fonts/bnpiconfont.ttf") format("truetype"), url("fonts/bnpiconfont.svg#bnpiconfont") format("svg");
+  src: url("fonts/bnpiconfontchat.eot");
+  src: url("fonts/bnpiconfontchat.eot?#iefix") format("embedded-opentype"), url("fonts/bnpiconfontchat.woff") format("woff"), url("fonts/bnpiconfontchat.ttf") format("truetype"), url("fonts/bnpiconfontchat.svg#bnpiconfont") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -151,16 +151,13 @@ input:focus, textarea:focus{
 }
 
 .fontcon-close:before {
-  content: "\e615";
+  content: "\e701";
 }
 .fontcon-expand:before {
-  content: "\e629";
+  content: "\e700";
 }
 .fontcon-collapse:before {
-  content: "\e62a";
-}
-.fontcon-reload:before {
-  content: "\e620";
+  content: "\e702";
 }
 
 /* chat component styles */
