@@ -295,7 +295,7 @@ body{
   font-size: 1em;
   color: #76767b;
   width: 100%;
-  resize: vertical;
+  resize: none;
   padding: 11px 12px;
   /* to maintain the standard space between the input  */
   -webkit-box-sizing: border-box;
@@ -479,6 +479,9 @@ label.css-label.radio:before {
   border-top-right-radius: 0.38em;
   border-bottom-right-radius: 0.38em;
   border-bottom-left-radius: 0.38em;
+}
+.chat_holder p{
+	word-wrap: break-word;
 }
 .chat_holder p:first-child{
 	font-family:'regular';
