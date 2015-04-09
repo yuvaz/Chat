@@ -190,7 +190,7 @@ body{
 .chat_window{
 	line-height:1em;
 	width: 320px;
-	margin:20px auto 50px;
+	margin:0 auto;
 	border:1px solid #ccc;
 }
 
